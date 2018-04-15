@@ -76,88 +76,83 @@ PHP 7.1 的大版本。
 
 这个问题的答案是：在 Windows 上，我们需要设置环境变量。
 
-具体的设置过程如下（演示系统为 Windows 10）：
+具体的设置过程如下（演示系统为 Windows 10），在 Windows 10 底部的搜索栏输入 `sy` ，然后打开 `系统[控制面板]` 。
 
 <img width="282" alt="codecasts_2018-04-14_23-38-06" src="https://user-images.githubusercontent.com/6011686/38780581-a29082b4-410b-11e8-8640-2d554275af31.png">
 
-在 Windows 10 底部的搜索栏输入 `sy` ，然后打开 `系统[控制面板]` 。
+点击左侧的 `高级系统设置`。
 
 <img width="590" alt="codecasts_2018-04-14_23-38-24" src="https://user-images.githubusercontent.com/6011686/38780589-b5880734-410b-11e8-96fc-5294e020d8e6.png">
 
-点击左侧的 `高级系统设置`。
+然后，点击下方的 `环境变量(N)`。
 
 <img width="374" alt="codecasts_2018-04-14_23-39-01" src="https://user-images.githubusercontent.com/6011686/38780614-1e7e8a4c-410c-11e8-8186-fb90817ca007.png">
 
-然后，点击下方的 `环境变量(N)`。
+选择 `Path` 那一行，点击 `编辑` 。
 
 <img width="485" alt="codecasts_2018-04-14_23-39-53" src="https://user-images.githubusercontent.com/6011686/38780602-d5728dc6-410b-11e8-9ff1-9d47b98af6de.png">
 
-选择 `Path` 那一行，点击 `编辑` ：
+点击右上 `新建` 按钮，在需要输入的地方输入类似图片中的内容：`C:\wamp\bin\php\php7.1.16` 。这里的 `php7.1.16` 目录需要对应你使用的 php 版本，比如你使用的是 PHP 5.6.38，这里会对应成 `php5.6.38` 。这些 PHP 版本的对应都可以在 `C:\wamp\bin\php` 目录下看得到的。 最后 `确定` 保存。
 
 <img width="414" alt="codecasts_2018-04-14_23-48-00" src="https://user-images.githubusercontent.com/6011686/38780636-77b1dfce-410c-11e8-811f-e995fe36d5eb.png">
 
-点击右上 `新建` 按钮，在需要输入的地方输入类似图片中的内容：`C:\wamp\bin\php\php7.1.16` 。这里的 `php7.1.16` 目录需要对应你使用的 php 版本，比如你使用的是 PHP 5.6.38，这里会对应成 `php5.6.38` 。这些 PHP 版本的对应都可以在 `C:\wamp\bin\php` 目录下看得到的。 最后 `确定` 保存。
 
 > 往回退的界面也注意要点击 `确定` 保存。
 
-在完成以上的环境变量设置之后，既可打开命令行工具
+在完成以上的环境变量设置之后，既可打开命令行工具；在底部搜索栏输入 `cmd` ，然后 Enter 即可打开命令行工具。
 
 <img width="263" alt="codecasts_2018-04-14_23-48-30" src="https://user-images.githubusercontent.com/6011686/38780720-a6bb7b3a-410d-11e8-94b4-39b8430441fe.png">
 
-在底部搜索栏输入 `cmd` ，然后 Enter 即可打开命令行工具。
+在命令行输入 `php -v`，能看到类似上图的结果，即表明 PHP 的环境变量设置成功。
 
 <img width="734" alt="codecasts_2018-04-14_23-48-51" src="https://user-images.githubusercontent.com/6011686/38780722-a7950350-410d-11e8-84c5-ec0dafe525a5.png">
-
-在命令行输入 `php -v`，能看到类似上图的结果，即表明 PHP 的环境变量设置成功。
 
 
 ## 3.安装 Composer
 
-现代化的 PHP 开发，离不开 Composer 了，我们来安装之。访问 Composer 官网：https://getcomposer.org/
+现代化的 PHP 开发，离不开 Composer 了，我们来安装之。访问 Composer 官网：https://getcomposer.org/ ，点击 `Download` 按钮。
 
 <img width="754" alt="codecasts_2018-04-14_23-51-07" src="https://user-images.githubusercontent.com/6011686/38780820-fa35ea9c-410e-11e8-8063-195eb444ceaa.png">
 
-点击 `Download` 按钮。
+来到 https://getcomposer.org/download 页面，点击 [Composer-Setup.exe](https://getcomposer.org/Composer-Setup.exe) 的链接，下载 Composer 安装器。
 
 <img width="792" alt="codecasts_2018-04-14_23-51-51" src="https://user-images.githubusercontent.com/6011686/38780828-15339f9c-410f-11e8-8e52-a9c4905dbb3c.png">
 
-来到 https://getcomposer.org/download 页面，点击 [Composer-Setup.exe](https://getcomposer.org/Composer-Setup.exe) 的链接，下载 Composer 安装器。
-
-等待安装成功后，双击 [Composer-Setup.exe](https://getcomposer.org/Composer-Setup.exe) 来安装 Composer ：
-
-<img width="374" alt="codecasts_2018-04-14_23-52-57" src="https://user-images.githubusercontent.com/6011686/38780847-5508cd0e-410f-11e8-86ec-947cea03fc18.png">
+等待安装成功后，双击 [Composer-Setup.exe](https://getcomposer.org/Composer-Setup.exe) 来安装 Composer 。
 
 点击 `Next` 即可。
 
-<img width="374" alt="codecasts_2018-04-14_23-53-15" src="https://user-images.githubusercontent.com/6011686/38780856-6c363b06-410f-11e8-842a-7b3f5a7e27d3.png">
+<img width="374" alt="codecasts_2018-04-14_23-52-57" src="https://user-images.githubusercontent.com/6011686/38780847-5508cd0e-410f-11e8-86ec-947cea03fc18.png">
 
 这里 Composer 会自动检测你设置的 `PHP 环境变量`（即是我们上文设置的环境变量）。
 
+<img width="374" alt="codecasts_2018-04-14_23-53-15" src="https://user-images.githubusercontent.com/6011686/38780856-6c363b06-410f-11e8-842a-7b3f5a7e27d3.png">
+
+下面这个可以不管，直接点击 `Next` 即可。
+
 <img width="374" alt="codecasts_2018-04-14_23-53-38" src="https://user-images.githubusercontent.com/6011686/38780867-99680b7c-410f-11e8-9fe4-57e4cf2dbebf.png">
-
-这个可以不管，直接点击 `Next` 即可。
-
-<img width="374" alt="codecasts_2018-04-14_23-53-47" src="https://user-images.githubusercontent.com/6011686/38780871-af6c3f6a-410f-11e8-8191-740f3e3479fa.png">
 
 到这里之后，直接点击 `Install` ，等待 Composer 安装即可。
 
+<img width="374" alt="codecasts_2018-04-14_23-53-47" src="https://user-images.githubusercontent.com/6011686/38780871-af6c3f6a-410f-11e8-8191-740f3e3479fa.png">
+
+等待安装过程差不多是下图这样的。
+
 <img width="374" alt="codecasts_2018-04-14_23-53-59" src="https://user-images.githubusercontent.com/6011686/38780876-c7480c90-410f-11e8-94af-c174ddf8aa53.png">
 
-等待安装过程差不多是上图这样的。
+等待完成之后，点击 `Next`。
 
 <img width="374" alt="codecasts_2018-04-14_23-54-10" src="https://user-images.githubusercontent.com/6011686/38780882-e0c0caf4-410f-11e8-8f52-8b0575f50b97.png">
 
-点击 `Next`。
+点击 `Finish`。
 
 <img width="374" alt="codecasts_2018-04-14_23-54-41" src="https://user-images.githubusercontent.com/6011686/38780888-e11d026a-410f-11e8-8e16-ba0f35ae0e96.png">
 
-点击 `Finish`。走到这一步，真的不易，不过可以庆祝一下的是：**Composer 也安装成功啦！**
+走到这一步，真的不易，不过可以庆祝一下的是：**Composer 也安装成功啦！**
 
-我们来检验一下 Composer 是否安装成功：
+我们来检验一下 Composer 是否安装成功。还是像前文那样打开 命令行工具，然后输入 `composer` 按下 Enter，如果看到类似下图的界面。那么就表明 Composer 已成功安装！
 
 <img width="772" alt="codecasts_2018-04-14_23-55-19" src="https://user-images.githubusercontent.com/6011686/38780914-04087278-4110-11e8-89db-909baae19ee3.png">
-
-还是像前文那样打开 命令行工具，然后输入 `composer` 按下 Enter，如果看到类似上图的界面。那么就表明 Composer 已成功安装！
 
 ## 总结
 本文通过安装 WampServer ，配置 Windows 的环境变量和安装 Composer 这主要的三个步骤将完整的 Windows 的 PHP 的开发环境配置完成。希望对于想学习 PHP 同学来说会有一点点帮助。
