@@ -1,14 +1,20 @@
 > 此文推荐手持 Windows PC 的 PHP 新手阅读：即是那些想学习 PHP 的新同学。因为在学习 PHP 之前，你需要一个环境来运行 PHP。
 
-### 版本说明
+全文索引，主要由以下三部分内容组成：
+
+1. 安装 WampServer
+2. 配置环境变量
+3. 安装 Composer
+
+## 版本说明
 
 1. Windows 10
 2. Wampserver 3.0.6 (期望安装的软件版本：Apache 2.4.33, PHP 7.1.16, MySQL 5.7.21)
 3. Composer 1.6.4
 
-## 安装 WampServer
+## 1.安装 WampServer
 
-WampServer 是一个集成环境，它就包含了 Apache（服务器软件），PHP 和 MySQL （数据库），所以我们安装 WampServer 的话，即可获取这三个关键的，
+WampServer 是一个集成环境，它就包含了 `Apache`（服务器软件），`PHP` 和 `MySQL` （数据库），所以我们安装 WampServer 的话，即可获取这三个关键的，
 运行 PHP 环境所需要的软件。
 
 来到 WampServer 官网：http://www.wampserver.com/en/ 点击下载按钮：
@@ -20,7 +26,6 @@ WampServer 是一个集成环境，它就包含了 Apache（服务器软件）�
 <img width="822" alt="codecasts_2018-04-13_19-09-23" src="https://user-images.githubusercontent.com/6011686/38780026-4d5205a0-4103-11e8-836f-48147e5b3580.png">
 
 下载完成之后，跟安装其他的 Windows 软件过程没有太大的差别（我下面用一些列截图说明这个安装的每一步）
-
 
 <img width="223" alt="codecasts_2018-04-14_22-36-05" src="https://user-images.githubusercontent.com/6011686/38780049-a4e89e8c-4103-11e8-9ee7-24687fac58ca.png">
 <img width="374" alt="codecasts_2018-04-14_22-36-32" src="https://user-images.githubusercontent.com/6011686/38780050-a5280b30-4103-11e8-8335-0fd829e9a9d2.png">
@@ -57,7 +62,6 @@ PHP 7.1 的大版本。
 
 > 我们自己写的 PHP 代码（自己创建的 `.php` 文件）如何执行呢？如何像其他网站那样使用 PHP 跑起一个浏览器也可以访问的站点呢？
 
-
 在这里，使用 WampServer 作为 PHP 开发环境的情况下，需要记住一个非常非常重要的目录：`www` 目录。你可以直接从 WampServer 打开这个目录：
 
 <img width="206" alt="codecasts_2018-04-14_23-31-47" src="https://user-images.githubusercontent.com/6011686/38780487-de220bf6-4109-11e8-874e-4e72aeefb1c3.png">
@@ -65,6 +69,8 @@ PHP 7.1 的大版本。
 点开图片中的 `www directory` 即可，正常情况下，打开的目录是：`C:\wamp\www` 类似的目录。作为新手学习 PHP 的时候，可以将自己写的 PHP 代码放到这个目录下，然后从浏览器访问对应的 `.php` 文件即可看到解析的 PHP 内容。比如你在 `C:\wamp\www` 目录下创建了一个自己写的 `my.php` 文件，你就可以通过访问 http://localhost/my.php 来看到 `my.php` 的 PHP 代码解析后的具体内容。
 
 这样，通过浏览器看到 PHP 代码执行效果就完整实现了。
+
+## 2.配置环境变量
 
 那么，问题来了：如何在命令行中执行 PHP 代码或者 PHP 命令呢？
 
@@ -105,7 +111,7 @@ PHP 7.1 的大版本。
 在命令行输入 `php -v`，能看到类似上图的结果，即表明 PHP 的环境变量设置成功。
 
 
-## 安装 Composer
+## 3.安装 Composer
 
 现代化的 PHP 开发，离不开 Composer 了，我们来安装之。访问 Composer 官网：https://getcomposer.org/
 
@@ -115,25 +121,25 @@ PHP 7.1 的大版本。
 
 <img width="792" alt="codecasts_2018-04-14_23-51-51" src="https://user-images.githubusercontent.com/6011686/38780828-15339f9c-410f-11e8-8e52-a9c4905dbb3c.png">
 
-来到 https://getcomposer.org/download 页面，点击 Composer-Setup.exe 的链接，下载 Composer 安装器。
+来到 https://getcomposer.org/download 页面，点击 [Composer-Setup.exe](https://getcomposer.org/Composer-Setup.exe) 的链接，下载 Composer 安装器。
 
-等待安装成功后，双击 Composer-Setup.exe 来安装 Composer ：
+等待安装成功后，双击 [Composer-Setup.exe](https://getcomposer.org/Composer-Setup.exe) 来安装 Composer ：
 
 <img width="374" alt="codecasts_2018-04-14_23-52-57" src="https://user-images.githubusercontent.com/6011686/38780847-5508cd0e-410f-11e8-86ec-947cea03fc18.png">
 
-点击 Next 即可。
+点击 `Next` 即可。
 
 <img width="374" alt="codecasts_2018-04-14_23-53-15" src="https://user-images.githubusercontent.com/6011686/38780856-6c363b06-410f-11e8-842a-7b3f5a7e27d3.png">
 
-这里 Composer 会自动检测你设置的 PHP 环境变量（即是我们上文设置的环境变量）。
+这里 Composer 会自动检测你设置的 `PHP 环境变量`（即是我们上文设置的环境变量）。
 
 <img width="374" alt="codecasts_2018-04-14_23-53-38" src="https://user-images.githubusercontent.com/6011686/38780867-99680b7c-410f-11e8-9fe4-57e4cf2dbebf.png">
 
-这个可以不管，直接点击 Next 即可。
+这个可以不管，直接点击 `Next` 即可。
 
 <img width="374" alt="codecasts_2018-04-14_23-53-47" src="https://user-images.githubusercontent.com/6011686/38780871-af6c3f6a-410f-11e8-8191-740f3e3479fa.png">
 
-到这里之后，直接点击 Install ，等待 Composer 安装即可。
+到这里之后，直接点击 `Install` ，等待 Composer 安装即可。
 
 <img width="374" alt="codecasts_2018-04-14_23-53-59" src="https://user-images.githubusercontent.com/6011686/38780876-c7480c90-410f-11e8-94af-c174ddf8aa53.png">
 
@@ -141,11 +147,11 @@ PHP 7.1 的大版本。
 
 <img width="374" alt="codecasts_2018-04-14_23-54-10" src="https://user-images.githubusercontent.com/6011686/38780882-e0c0caf4-410f-11e8-8f52-8b0575f50b97.png">
 
-点击 Next。
+点击 `Next`。
 
 <img width="374" alt="codecasts_2018-04-14_23-54-41" src="https://user-images.githubusercontent.com/6011686/38780888-e11d026a-410f-11e8-8e16-ba0f35ae0e96.png">
 
-点击 Finish。走到这一步，真的不易，不过可以庆祝一下的是：Composer 也安装成功啦！
+点击 `Finish`。走到这一步，真的不易，不过可以庆祝一下的是：**Composer 也安装成功啦！**
 
 我们来检验一下 Composer 是否安装成功：
 
