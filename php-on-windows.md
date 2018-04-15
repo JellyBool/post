@@ -1,4 +1,6 @@
-> 此文推荐手持 Windows PC 的 PHP 新手阅读：即是那些想学习 PHP 的新同学。因为在学习 PHP 之前，你需要一个环境来运行 PHP。
+# 一篇文章搞定 Windows PHP 开发环境配置
+
+> 原文来自 [codecasts.com](https://www.codecasts.com/blog/post/wampserver-composer-php-dev-enviroments-on-windows)。 此文推荐手持 Windows PC 的 PHP 新手阅读：即是那些想学习 PHP 的新同学。因为在学习 PHP 之前，你需要一个环境来运行 PHP。
 
 全文索引，主要由以下三部分内容组成：
 
