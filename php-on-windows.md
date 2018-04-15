@@ -37,9 +37,10 @@ WampServer 是一个集成环境，它就包含了 Apache（服务器软件）�
 安装过程中会询问你是否使用 IE 作为默认浏览器，是否使用 Notepad++ 作为默认编辑器。这两个选项你不确定的话，直接选择`否`就可以。
 
 安装完成之后，双击桌面的 WampServer 图标即可启动 WampServer，待 WampServer 图标变成绿色即表明 WampServer 启动成功。
+
 <img width="258" alt="codecasts_2018-04-14_23-04-20" src="https://user-images.githubusercontent.com/6011686/38780331-67fe608e-4107-11e8-8865-5e5081aa68b3.png">
-启动成功之后，
-在浏览器（推荐 Chrome，或者你使用其他浏览器也 OK）地址栏访问 http://localhost ，可以看到类似下面的界面：
+
+启动成功之后，在浏览器（推荐 Chrome，或者你使用其他浏览器也 OK）地址栏访问 http://localhost ，可以看到类似下面的界面：
 
 <img width="783" alt="codecasts_2018-04-14_23-08-03" src="https://user-images.githubusercontent.com/6011686/38780403-300a9cfa-4108-11e8-8a7a-026d1ce277a1.png">
 
@@ -51,6 +52,64 @@ PHP 7.1 的大版本。
 升级到 PHP 7.1 之后，浏览器访问 http://localhost?phpinfo=1 ，可以看到类似下面的页面，即表示 PHP 升级成功。
 
 <img width="766" alt="codecasts_2018-04-14_23-07-22" src="https://user-images.githubusercontent.com/6011686/38780420-5fea9c0e-4108-11e8-98f0-27b450a88943.png">
+
+至此，WampServer 已经成功安装了，即我们已经拥有执行 PHP 代码的完整环境。但是
+
+> 我们自己写的 PHP 代码（自己创建的 `.php` 文件）如何执行呢？如何像其他网站那样使用 PHP 跑起一个浏览器也可以访问的站点呢？
+
+
+在这里，使用 WampServer 作为 PHP 开发环境的情况下，需要记住一个非常非常重要的目录：`www` 目录。你可以直接从 WampServer 打开这个目录：
+
+<img width="206" alt="codecasts_2018-04-14_23-31-47" src="https://user-images.githubusercontent.com/6011686/38780487-de220bf6-4109-11e8-874e-4e72aeefb1c3.png">
+
+点开图片中的 `www directory` 即可，正常情况下，打开的目录是：`C:\wamp\www` 类似的目录。作为新手学习 PHP 的时候，可以将自己写的 PHP 代码放到这个目录下，然后从浏览器访问对应的 `.php` 文件即可看到解析的 PHP 内容。比如你在 `C:\wamp\www` 目录下创建了一个自己写的 `my.php` 文件，你就可以通过访问 http://localhost/my.php 来看到 `my.php` 的 PHP 代码解析后的具体内容。
+
+这样，通过浏览器看到 PHP 代码执行效果就完整实现了。
+
+那么，问题来了：如何在命令行中执行 PHP 代码或者 PHP 命令呢？
+
+这个问题的答案是：在 Windows 上，我们需要设置环境变量。
+
+具体的设置过程如下（演示系统为 Windows 10）：
+
+<img width="282" alt="codecasts_2018-04-14_23-38-06" src="https://user-images.githubusercontent.com/6011686/38780581-a29082b4-410b-11e8-8640-2d554275af31.png">
+
+在 Windows 10 底部的搜索栏输入 `sy` ，然后打开 `系统[控制面板]` 。
+
+<img width="590" alt="codecasts_2018-04-14_23-38-24" src="https://user-images.githubusercontent.com/6011686/38780589-b5880734-410b-11e8-96fc-5294e020d8e6.png">
+
+点击左侧的 `高级系统设置`。
+
+<img width="374" alt="codecasts_2018-04-14_23-39-01" src="https://user-images.githubusercontent.com/6011686/38780614-1e7e8a4c-410c-11e8-8186-fb90817ca007.png">
+
+然后，点击下方的 `环境变量(N)`。
+
+<img width="485" alt="codecasts_2018-04-14_23-39-53" src="https://user-images.githubusercontent.com/6011686/38780602-d5728dc6-410b-11e8-9ff1-9d47b98af6de.png">
+
+选择 `Path` 那一行，点击 `编辑` ：
+
+<img width="414" alt="codecasts_2018-04-14_23-48-00" src="https://user-images.githubusercontent.com/6011686/38780636-77b1dfce-410c-11e8-811f-e995fe36d5eb.png">
+
+点击右上 `新建` 按钮，在需要输入的地方输入类似图片中的内容：`C:\wamp\bin\php\php7.1.16` 。这里的 `php7.1.16` 目录需要对应你使用的 php 版本，比如你使用的是 PHP 5.6.38，这里会对应成 `php5.6.38` 。这些 PHP 版本的对应都可以在 `C:\wamp\bin\php` 目录下看得到的。 最后 `确定` 保存。
+
+> 往回退的界面也注意要点击 `确定` 保存。
+
+在完成以上的环境变量设置之后，既可打开命令行工具
+
+<img width="263" alt="codecasts_2018-04-14_23-48-30" src="https://user-images.githubusercontent.com/6011686/38780720-a6bb7b3a-410d-11e8-94b4-39b8430441fe.png">
+
+在底部搜索栏输入 `cmd` ，然后 Enter 即可打开命令行工具。
+
+<img width="734" alt="codecasts_2018-04-14_23-48-51" src="https://user-images.githubusercontent.com/6011686/38780722-a7950350-410d-11e8-84c5-ec0dafe525a5.png">
+
+在命令行输入 `php -v`，能看到类似上图的结果，即表明 PHP 的环境变量设置成功。
+
+
+
+
+
+
+
 
 
 
