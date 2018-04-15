@@ -25,7 +25,7 @@ WampServer 是一个集成环境，它就包含了 `Apache`（服务器软件）
 
 <img width="822" alt="codecasts_2018-04-13_19-09-23" src="https://user-images.githubusercontent.com/6011686/38780026-4d5205a0-4103-11e8-836f-48147e5b3580.png">
 
-下载完成之后，跟安装其他的 Windows 软件过程没有太大的差别（我下面用一些列截图说明这个安装的每一步）
+下载完成之后，跟安装其他的 Windows 软件过程没有太大的差别，基本就是一路的 `Next` 按钮即可（我下面用一些列截图说明这个安装的每一步）
 
 <img width="223" alt="codecasts_2018-04-14_22-36-05" src="https://user-images.githubusercontent.com/6011686/38780049-a4e89e8c-4103-11e8-9ee7-24687fac58ca.png">
 <img width="374" alt="codecasts_2018-04-14_22-36-32" src="https://user-images.githubusercontent.com/6011686/38780050-a5280b30-4103-11e8-8335-0fd829e9a9d2.png">
@@ -33,13 +33,17 @@ WampServer 是一个集成环境，它就包含了 `Apache`（服务器软件）
 <img width="374" alt="codecasts_2018-04-14_22-37-04" src="https://user-images.githubusercontent.com/6011686/38780052-a5a92576-4103-11e8-82fb-1933fe2b021d.png">
 <img width="374" alt="codecasts_2018-04-14_22-37-21" src="https://user-images.githubusercontent.com/6011686/38780053-a5e797c0-4103-11e8-9cf4-fc240af9b1c1.png">
 <img width="374" alt="codecasts_2018-04-14_22-37-35" src="https://user-images.githubusercontent.com/6011686/38780054-a62589c2-4103-11e8-8d27-6415753ce79a.png">
+
+下图的两个选项是询问你是否使用 IE 作为默认浏览器，是否使用 Notepad++ 作为默认编辑器，这里可以直接选择 `否` 的。
+
 <img width="374" alt="codecasts_2018-04-14_22-40-00" src="https://user-images.githubusercontent.com/6011686/38780055-a669d8b6-4103-11e8-84bd-ce29f4ba693e.png">
 <img width="374" alt="codecasts_2018-04-14_22-40-43" src="https://user-images.githubusercontent.com/6011686/38780056-a6a9b5da-4103-11e8-85ba-d84311e98ccf.png">
+
+这里主要可以`允许访问`。
+
 <img width="461" alt="codecasts_2018-04-14_22-41-45" src="https://user-images.githubusercontent.com/6011686/38780057-a6f14b0c-4103-11e8-8ab2-62bdf92d1d75.png">
 <img width="374" alt="codecasts_2018-04-14_22-42-09" src="https://user-images.githubusercontent.com/6011686/38780322-5730d5c0-4107-11e8-82d9-7f3e733ec762.png">
 <img width="374" alt="codecasts_2018-04-14_22-42-20" src="https://user-images.githubusercontent.com/6011686/38780323-578e74dc-4107-11e8-84d6-618d53edd30d.png">
-
-安装过程中会询问你是否使用 IE 作为默认浏览器，是否使用 Notepad++ 作为默认编辑器。这两个选项你不确定的话，直接选择`否`就可以。
 
 安装完成之后，双击桌面的 WampServer 图标即可启动 WampServer，待 WampServer 图标变成绿色即表明 WampServer 启动成功。
 
@@ -92,7 +96,7 @@ PHP 7.1 的大版本。
 
 <img width="485" alt="codecasts_2018-04-14_23-39-53" src="https://user-images.githubusercontent.com/6011686/38780602-d5728dc6-410b-11e8-9ff1-9d47b98af6de.png">
 
-点击右上 `新建` 按钮，在需要输入的地方输入类似图片中的内容：`C:\wamp\bin\php\php7.1.16` 。这里的 `php7.1.16` 目录需要对应你使用的 php 版本，比如你使用的是 PHP 5.6.38，这里会对应成 `php5.6.38` 。这些 PHP 版本的对应都可以在 `C:\wamp\bin\php` 目录下看得到的。 最后 `确定` 保存。
+点击右上 `新建` 按钮，在需要输入的地方输入类似图片中的内容：`C:\wamp\bin\php\php7.1.16` 。这里的 `php7.1.16` 目录需要对应你使用的 php 版本，比如你使用的是 PHP 5.6.35，这里会对应成 `php5.6.35` 。这些 PHP 版本的对应都可以在 `C:\wamp\bin\php` 目录下看得到的。 最后 `确定` 保存。
 
 <img width="414" alt="codecasts_2018-04-14_23-48-00" src="https://user-images.githubusercontent.com/6011686/38780636-77b1dfce-410c-11e8-811f-e995fe36d5eb.png">
 
@@ -110,7 +114,11 @@ PHP 7.1 的大版本。
 
 ## 3.安装 Composer
 
-现代化的 PHP 开发，离不开 Composer 了，我们来安装之。访问 Composer 官网：https://getcomposer.org/ ，点击 `Download` 按钮。
+> 以下操作最好最好是在使用了梯子的情况下进行，如果你没有梯子，可以直接访问 https://tizi.io 即可购买一个稳定高速的梯子服务。
+
+现代化的 PHP 开发，离不开 Composer 了，因为 Composer 最为 PHP 的包依赖关系管理工具，极大地便利了 PHP 开发者，我们来安装之。如果你对使用 Composer 有任何的疑问，可以看 Codecasts.com 上的这个教程：[Composer 完整教程](https://www.codecasts.com/series/you-must-use-composer)
+
+访问 Composer 官网：https://getcomposer.org/ ，点击 `Download` 按钮。
 
 <img width="754" alt="codecasts_2018-04-14_23-51-07" src="https://user-images.githubusercontent.com/6011686/38780820-fa35ea9c-410e-11e8-8063-195eb444ceaa.png">
 
@@ -155,7 +163,8 @@ PHP 7.1 的大版本。
 <img width="772" alt="codecasts_2018-04-14_23-55-19" src="https://user-images.githubusercontent.com/6011686/38780914-04087278-4110-11e8-89db-909baae19ee3.png">
 
 ## 总结
-本文通过安装 WampServer ，配置 Windows 的环境变量和安装 Composer 这主要的三个步骤将完整的 Windows 的 PHP 的开发环境配置完成。希望对于想学习 PHP 同学来说会有一点点帮助。
+本文通过安装 WampServer ，配置 Windows 的环境变量和安装 Composer 这主要的三个步骤将完整的 Windows 的 PHP 的开发环境配置完成。
+希望对于想学习 PHP 同学来说会有一点点帮助。
 
 最后，一如既往的是：**Happy Hakcing**
 
