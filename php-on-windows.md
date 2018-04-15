@@ -66,7 +66,7 @@ PHP 7.1 的大版本。
 
 > 我们自己写的 PHP 代码（自己创建的 `.php` 文件）如何执行呢？如何像其他网站那样使用 PHP 跑起一个浏览器也可以访问的站点呢？
 
-在这里，使用 WampServer 作为 PHP 开发环境的情况下，需要记住一个非常非常重要的目录：`www` 目录。你可以直接从 WampServer 打开这个目录：
+在这里，使用 WampServer 作为 PHP 开发环境的情况下，需要记住一个**非常非常重要的目录**：`www` 目录。你可以直接从 WampServer 打开这个目录：
 
 <img width="206" alt="codecasts_2018-04-14_23-31-47" src="https://user-images.githubusercontent.com/6011686/38780487-de220bf6-4109-11e8-874e-4e72aeefb1c3.png">
 
